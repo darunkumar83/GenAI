@@ -2,12 +2,13 @@ import streamlit as st
 import google.generativeai as genai
 
 # Load Gemini API Key from secrets or input manually
-GEMINI_API_KEY = "test"  # Replace with your actual key
+#openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
+GEMINI_API_KEY = st.sidebar.text_input('GEMINI API Key', type='password')
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Function to get response from Gemini
 def get_gemini_response(prompt):
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("Gemini 2.0 Pro Experimental 02-05")
     response = model.generate_content(prompt)
     return response.text
 

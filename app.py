@@ -8,7 +8,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 # Function to get response from Gemini
 def get_gemini_response(prompt):
-    model = genai.GenerativeModel("Gemini 2.0 Pro Experimental 02-05")
+    model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content(prompt)
     return response.text
 
